@@ -112,9 +112,13 @@ nav .btn{min-height:44px;padding:8px 18px;font-size:15px}
 .box ul{margin:0;padding:0;list-style:none}
 .box li{padding:10px 0;border-bottom:1px dashed rgb(255 255 255/.2);display:flex;gap:12px}
 .box li:last-child{border:0}
+.navs{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.nav-btn{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border-radius:999px;background:#fff;color:var(--horse-d);font-weight:700;font-size:15px;text-decoration:none;border:1.5px solid var(--horse)}
+.nav-btn:hover{background:var(--horse);color:#fff}
+.box li span{flex:1}
 .box li b{color:#fff;min-width:6.5em}
 .note{font-size:15px;opacity:.85;margin:14px 0 0}
-@media(max-width:760px){.det .cols{grid-template-columns:1fr}}
+@media(max-width:760px){.det .cols{grid-template-columns:1fr}.box li b{min-width:4.2em}.box{padding:22px}}
 
 /* heart */
 .heart{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,64px);align-items:center}
@@ -230,15 +234,14 @@ footer a{color:#fff}
       <div class="box">
         <h3>מותאם לזכאי אגף השיקום</h3>
         <p class="price">פעילות המותאמת גם לזכאי אגף השיקום של משרד הביטחון</p>
-        <p class="note">הטיול מותנה במינימום 2 משתתפים ובהתאמה אישית.</p>
       </div>
       <div class="box">
         <h3>פרטים</h3>
         <ul>
           <li><b>משך</b><span>כשעה וחצי של רכיבה + עצירת קפה</span></li>
-          <li><b>קבוצה</b><span>עד 4 משתתפים, מינימום 2</span></li>
+          <li><b>קבוצה</b><span>עד 4 משתתפים</span></li>
           <li><b>מועד</b><span>בתיאום מראש</span></li>
-          <li><b>מיקום</b><span>חוות שלי – מושב שדמה</span></li>
+          <li><b>מיקום</b><span>חוות שלי – מושב שדמה<span class="navs"><a class="nav-btn" href="https://maps.app.goo.gl/62yU4JRygLe655kP9">Google Maps</a><a class="nav-btn" href="https://waze.com/ul?ll=31.8281944,34.7357222&amp;navigate=yes">Waze</a></span></span></li>
           <li><b>לפרטים</b><span><a class="wa-link" href="https://wa.me/972584232723">שליחת הודעה בוואטסאפ</a></span></li>
         </ul>
       </div>
@@ -252,7 +255,6 @@ footer a{color:#fff}
     <div>
       <h2>משהו מהלב שלנו</h2>
       <blockquote>היוזמה נולדה מתוך רצון אמיתי לתת רגע של נשימה, שקט וחיבור – בלי רווח ובלי תנאים, רק מקום להיות בו.</blockquote>
-      <p class="disc">המפגש אינו טיפול רפואי, אלא מרחב תומך ומכיל בטבע.</p>
     </div>
   </div>
 </section>
@@ -263,7 +265,8 @@ footer a{color:#fff}
       <h2>נשמח להכיר אתכם</h2>
       <p>כדי שנוכל להכיר אתכם ולהתאים עבורכם את חוויית הרכיבה בצורה הטובה והבטוחה ביותר, נשמח שתמלאו שאלון היכרות קצר.</p>
       <p>לאחר מילוי הפרטים נחזור אליכם להמשך תיאום.</p>
-      <p style="margin:18px 0 0;color:var(--mute)">חוות שלי – מושב שדמה · בתיאום מראש</p>
+      <p style="margin:18px 0 6px;color:var(--mute)">חוות שלי – מושב שדמה · בתיאום מראש</p>
+      <div class="navs loc"><a class="nav-btn" href="https://maps.app.goo.gl/62yU4JRygLe655kP9">Google Maps</a><a class="nav-btn" href="https://waze.com/ul?ll=31.8281944,34.7357222&amp;navigate=yes">Waze</a></div>
     </div>
     <div class="qcard">
       <div class="qic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3.5h6v2H9zM9 10h6M9 14h6M9 18h3"/></svg></div>
@@ -281,7 +284,7 @@ footer a{color:#fff}
   <div class="wrap">
     <div><strong>חוות שלי</strong> – חווה לטיפול בלוחמים באמצעות סוסים · מושב שדמה</div>
     <div><a class="wa-link" href="https://wa.me/972584232723">כתבו לנו בוואטסאפ</a> · <a class="form-link" href="https://forms.gle/ciFUum2jzkoPxozJ8">שאלון היכרות</a></div>
-    <div>המפגש אינו טיפול רפואי 💙</div>
+    <div>📍 <a href="https://maps.app.goo.gl/62yU4JRygLe655kP9">מושב שדמה – Google Maps</a> · <a href="https://waze.com/ul?ll=31.8281944,34.7357222&amp;navigate=yes">Waze</a></div>
   </div>
 </footer>
 
@@ -308,7 +311,7 @@ footer a{color:#fff}
   document.getElementById('gPrev').onclick = () => step(1);
   gal.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1); });
 
-  document.querySelectorAll('.form-link').forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });
+  document.querySelectorAll('.form-link,.nav-btn,footer a[href^="https"]').forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });
 }
 </script>
 </body>
