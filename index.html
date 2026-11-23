@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>חוות שלי – טיולי סוסים שיקומיים</title>
-<meta name="description" content="חוות שלי במושב שדמה – טיולי סוסים בקבוצה קטנה לפצועי מבצע חרבות ברזל, כוחות הביטחון, חיילים ומילואימניקים. מרחב נשימה, חיבור ושקט בטבע.">
+<meta name="description" content="חוות שלי במושב שדמה – טיול רכיבה של כשעה וחצי בטבע, בקבוצות קטנות של עד 4 משתתפים, עם עצירה לקפה ופינוקים. מותאם גם לזכאי אגף השיקום של משרד הביטחון.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&family=Suez+One&display=swap" rel="stylesheet">
@@ -127,18 +127,12 @@ nav .btn{min-height:44px;padding:8px 18px;font-size:15px}
 /* form */
 .contact{background:linear-gradient(var(--grass-l),var(--bg))}
 .contact .in{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,64px);align-items:start}
-.phone{display:inline-block;font:700 clamp(28px,4vw,40px) Heebo,sans-serif;color:var(--horse);text-decoration:none;direction:ltr;margin:4px 0 2px}
-form{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,3vw,34px);box-shadow:0 18px 40px rgb(40 60 20/.1);display:grid;gap:16px}
-.row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
-label{display:grid;gap:6px;font-weight:500;font-size:15px}
-input,select,textarea{font:16px Heebo,sans-serif;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);min-height:48px;width:100%}
-textarea{min-height:90px;resize:vertical}
-.err{color:#c0392b;font-size:14px;min-height:1em}
-.ok{display:none;background:#e9f8ee;color:#145a2e;border-radius:14px;padding:16px;font-weight:500}
-.ok.on{display:block}
-.ok a{margin-top:10px}
+.qcard{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,3vw,36px);box-shadow:0 18px 40px rgb(40 60 20/.1);display:grid;gap:12px;justify-items:start}
+.qcard h3{color:var(--horse);margin:0}.qcard p{margin:0;color:var(--mute)}
+.qic{width:62px;height:62px;border-radius:18px;display:grid;place-items:center;background:var(--grass-l);color:var(--grass)}.qic svg{width:34px;height:34px}
+.or{margin-top:8px;font-size:15px;color:var(--mute)}
+.qcard .sign{margin-top:10px;padding-top:14px;border-top:1px dashed var(--line);width:100%;color:var(--ink)}
 @media(max-width:820px){.contact .in{grid-template-columns:1fr}}
-@media(max-width:480px){.row{grid-template-columns:1fr}}
 
 footer{background:var(--grass-d);color:#dfe9d2;padding:36px max(5vw,16px);font-size:15px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:18px 40px;align-items:center;justify-content:space-between}
@@ -160,10 +154,10 @@ footer a{color:#fff}
       <a href="#about">על החוויה</a>
       <a href="#trip">מה בטיול</a>
       <a href="#gallery">גלריה</a>
-      <a href="#details">מחיר ותנאים</a>
+      <a href="#details">פרטים</a>
       <a href="#contact">תיאום</a>
     </div>
-    <a class="btn wa wa-link" href="https://wa.me/972584232723"><svg><use href="#wa"/></svg>וואטסאפ לרוני</a>
+    <a class="btn wa wa-link" href="https://wa.me/972584232723"><svg><use href="#wa"/></svg>וואטסאפ</a>
   </div>
 </nav>
 
@@ -171,12 +165,12 @@ footer a{color:#fff}
   <img src="img/hero.jpg" alt="רוכבים על סוסים בשביל בין שדות ירוקים">
   <div class="in">
     <div>
-      <span class="tag">חוות סוסים שיקומית לכוחות הביטחון</span>
+      <span class="tag">ברוכים הבאים לחוות שלי</span>
       <h1>מרחב נשימה, חיבור ושקט בטבע</h1>
-      <p>טיול סוסים בקבוצה קטנה לפצועי מבצע חרבות ברזל – ומתאים גם לחיילים, מילואימניקים וכל באי מערכת השיקום. בחוות שלי, במושב שדמה.</p>
+      <p>בחווה שלנו, במושב שדמה, אנחנו מזמינים אתכם לקחת רגע לעצמכם, להתנתק מהשגרה וליהנות מחוויית רכיבה בטבע – באווירה רגועה, אישית ומכילה.</p>
       <div class="cta">
         <a class="btn wa wa-link" href="https://wa.me/972584232723"><svg><use href="#wa"/></svg>תיאום בוואטסאפ</a>
-        <a class="btn ghost" href="#contact">השארת פרטים</a>
+        <a class="btn ghost form-link" href="https://forms.gle/ciFUum2jzkoPxozJ8">לשאלון ההיכרות</a>
       </div>
     </div>
     <img class="seal" src="img/logo.jpg" alt="חוות שלי – חווה לטיפול בלוחמים באמצעות סוסים">
@@ -185,11 +179,10 @@ footer a{color:#fff}
 
 <section class="aud" aria-label="למי זה מתאים">
   <ul>
-    <li>פצועי חרבות ברזל</li>
     <li>כוחות הביטחון</li>
     <li>חיילים</li>
     <li>מילואימניקים</li>
-    <li>באי מערכת השיקום</li>
+    <li>זכאי אגף השיקום של משרד הביטחון</li>
   </ul>
 </section>
 
@@ -197,9 +190,9 @@ footer a{color:#fff}
   <div class="wrap intro">
     <div>
       <h2>אנחנו פותחים את הלב</h2>
-      <p class="lead">בחוות שלי במושב שדמה אנו מציעים טיול סוסים בקבוצה קטנה לפצועי מבצע חרבות ברזל.</p>
+      <p class="lead">שמחים שפניתם אלינו! בחוות שלי במושב שדמה מחכה לכם חוויית רכיבה בטבע – רגועה, אישית ומכילה.</p>
       <p>שעה וחצי של רכיבה בין שדות ירוקים ושבילי חורשה, עצירה לקפה ופינוקים בשטח, וזמן להיות – עם הסוסים, עם הטבע ועם השקט. בלי לחץ, בלי ציפיות, בקצב שלך.</p>
-      <a class="btn br" href="#contact">לתיאום טיול</a>
+      <a class="btn br form-link" href="https://forms.gle/ciFUum2jzkoPxozJ8">למילוי שאלון ההיכרות</a>
     </div>
     <div class="stack-img">
       <img class="a" src="img/forest.jpg" alt="רכיבה בשביל חורשת אקליפטוס">
@@ -232,11 +225,11 @@ footer a{color:#fff}
 
 <section class="band det" id="details">
   <div class="wrap">
-    <h2>מחיר, תנאים ותיאום</h2>
+    <h2>פרטים ותיאום</h2>
     <div class="cols">
       <div class="box">
-        <h3>מחיר מיוחד לפצועים</h3>
-        <p class="price">דרך אפליקציית השיקום של משרד הביטחון</p>
+        <h3>מותאם לזכאי אגף השיקום</h3>
+        <p class="price">פעילות המותאמת גם לזכאי אגף השיקום של משרד הביטחון</p>
         <p class="note">הטיול מותנה במינימום 2 משתתפים ובהתאמה אישית.</p>
       </div>
       <div class="box">
@@ -246,7 +239,7 @@ footer a{color:#fff}
           <li><b>קבוצה</b><span>עד 4 משתתפים, מינימום 2</span></li>
           <li><b>מועד</b><span>בתיאום מראש</span></li>
           <li><b>מיקום</b><span>חוות שלי – מושב שדמה</span></li>
-          <li><b>לפרטים</b><span>רוני – <a href="tel:+972584232723" dir="ltr">058-423-2723</a></span></li>
+          <li><b>לפרטים</b><span><a class="wa-link" href="https://wa.me/972584232723">שליחת הודעה בוואטסאפ</a></span></li>
         </ul>
       </div>
     </div>
@@ -267,40 +260,27 @@ footer a{color:#fff}
 <section class="band contact" id="contact">
   <div class="wrap in">
     <div>
-      <h2>בואו לנשום איתנו</h2>
-      <p>השאירו פרטים והם יישלחו ישירות לרוני בוואטסאפ – נחזור אליכם לתיאום מועד והתאמה אישית.</p>
-      <p style="margin:18px 0 0;color:var(--mute)">או התקשרו לרוני:</p>
-      <a class="phone" href="tel:+972584232723">058-423-2723</a>
-      <p style="margin:6px 0 0;color:var(--mute)">חוות שלי – מושב שדמה · בתיאום מראש</p>
+      <h2>נשמח להכיר אתכם</h2>
+      <p>כדי שנוכל להכיר אתכם ולהתאים עבורכם את חוויית הרכיבה בצורה הטובה והבטוחה ביותר, נשמח שתמלאו שאלון היכרות קצר.</p>
+      <p>לאחר מילוי הפרטים נחזור אליכם להמשך תיאום.</p>
+      <p style="margin:18px 0 0;color:var(--mute)">חוות שלי – מושב שדמה · בתיאום מראש</p>
     </div>
-    <form id="lead" novalidate>
-      <div class="row">
-        <label>שם מלא<input id="fName" name="name" autocomplete="name" required></label>
-        <label>טלפון<input id="fPhone" name="phone" type="tel" inputmode="tel" autocomplete="tel" dir="ltr" required></label>
-      </div>
-      <div class="row">
-        <label>מספר משתתפים
-          <select id="fCount" name="count"><option>1</option><option selected>2</option><option>3</option><option>4</option></select>
-        </label>
-        <label>אני…
-          <select id="fType" name="type">
-            <option>פצוע/ת חרבות ברזל</option><option>מילואימניק/ית</option><option>חייל/ת</option><option>כוחות הביטחון</option><option>באי מערכת השיקום</option><option>אחר</option>
-          </select>
-        </label>
-      </div>
-      <label>מועד מועדף<input id="fDate" name="date" placeholder="למשל: יום שני בבוקר / שבוע הבא"></label>
-      <label>משהו שחשוב לנו לדעת (לא חובה)<textarea id="fNote" name="note" placeholder="ניסיון ברכיבה, צרכים מיוחדים, שאלות…"></textarea></label>
-      <div class="err" id="fErr" role="alert"></div>
-      <button class="btn wa" type="submit"><svg><use href="#wa"/></svg>שליחה לרוני בוואטסאפ</button>
-      <div class="ok" id="fOk">הפרטים מוכנים! אם וואטסאפ לא נפתח אוטומטית, לחצו כאן:<br><a class="btn wa" id="fLink" href="#"><svg><use href="#wa"/></svg>פתיחת וואטסאפ</a></div>
-    </form>
+    <div class="qcard">
+      <div class="qic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3.5h6v2H9zM9 10h6M9 14h6M9 18h3"/></svg></div>
+      <h3>שאלון היכרות קצר</h3>
+      <p>כמה דקות בלבד – ואנחנו נדאג לכל השאר.</p>
+      <a class="btn br form-link" href="https://forms.gle/ciFUum2jzkoPxozJ8">למילוי השאלון</a>
+      <div class="or">יש שאלה? כתבו לנו</div>
+      <a class="btn wa wa-link" href="https://wa.me/972584232723"><svg><use href="#wa"/></svg>שליחת הודעה בוואטסאפ</a>
+      <p class="sign">מחכים לפגוש אתכם ולחלוק יחד רגעים של טבע, חיבור ושקט 💙<br><b>צוות חוות שלי</b></p>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
     <div><strong>חוות שלי</strong> – חווה לטיפול בלוחמים באמצעות סוסים · מושב שדמה</div>
-    <div>רוני: <a href="tel:+972584232723" dir="ltr">058-423-2723</a></div>
+    <div><a class="wa-link" href="https://wa.me/972584232723">כתבו לנו בוואטסאפ</a> · <a class="form-link" href="https://forms.gle/ciFUum2jzkoPxozJ8">שאלון היכרות</a></div>
     <div>המפגש אינו טיפול רפואי 💙</div>
   </div>
 </footer>
@@ -310,7 +290,7 @@ footer a{color:#fff}
 <script>
 {
   const PHONE = '972584232723';
-  const greet = 'היי רוני, הגעתי מהאתר של חוות שלי ואשמח לפרטים על טיול הסוסים 🐎';
+  const greet = 'היי, הגעתי מהאתר של חוות שלי ואשמח לפרטים על טיול הסוסים 🐎';
   document.querySelectorAll('.wa-link').forEach(a => {
     a.href = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(greet);
     a.target = '_blank'; a.rel = 'noopener';
@@ -328,25 +308,7 @@ footer a{color:#fff}
   document.getElementById('gPrev').onclick = () => step(1);
   gal.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') step(-1); if (e.key === 'ArrowRight') step(1); });
 
-  const $ = id => document.getElementById(id);
-  $('lead').addEventListener('submit', e => {
-    e.preventDefault();
-    const name = $('fName').value.trim(), phone = $('fPhone').value.trim();
-    if (!name) { $('fErr').textContent = 'נא למלא שם'; $('fName').focus(); return; }
-    if (phone.replace(/\D/g,'').length < 9) { $('fErr').textContent = 'נא למלא מספר טלפון תקין'; $('fPhone').focus(); return; }
-    $('fErr').textContent = '';
-    const lines = [
-      'היי רוני, אשמח לתאם טיול סוסים בחוות שלי 🐎',
-      'שם: ' + name, 'טלפון: ' + phone,
-      'משתתפים: ' + $('fCount').value, 'אני: ' + $('fType').value
-    ];
-    if ($('fDate').value.trim()) lines.push('מועד מועדף: ' + $('fDate').value.trim());
-    if ($('fNote').value.trim()) lines.push('הערות: ' + $('fNote').value.trim());
-    const url = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(lines.join('\n'));
-    const link = $('fLink'); link.href = url; link.target = '_blank'; link.rel = 'noopener';
-    $('fOk').classList.add('on');
-    try { const w = window.open(url, '_blank'); if (!w) throw 0; } catch (_) {}
-  });
+  document.querySelectorAll('.form-link').forEach(a => { a.target = '_blank'; a.rel = 'noopener'; });
 }
 </script>
 </body>
