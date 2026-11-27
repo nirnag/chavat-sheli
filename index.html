@@ -52,9 +52,8 @@ nav .btn{min-height:44px;padding:8px 18px;font-size:15px}
 
 /* hero */
 .hero{position:relative;min-height:min(86vh,760px);display:grid;align-items:end;color:#fff;overflow:hidden}
-.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:drift 24s ease-in-out infinite alternate}
-@keyframes drift{to{transform:scale(1.08) translateX(-2%)}}
-@media(prefers-reduced-motion:reduce){.hero>img{animation:none}html{scroll-behavior:auto}}
+.hero>.hv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#2b4c16}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgb(25 45 12/.92) 0%,rgb(25 45 12/.55) 45%,rgb(0 0 0/.05) 80%)}
 .hero .in{position:relative;z-index:1;padding:clamp(40px,6vw,80px) max(5vw,16px);max-width:1180px;margin:0 auto;width:100%;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
 .tag{display:inline-block;background:var(--horse);color:#fff;padding:6px 16px;border-radius:999px;font-weight:700;font-size:15px;margin-bottom:16px}
@@ -101,6 +100,16 @@ nav .btn{min-height:44px;padding:8px 18px;font-size:15px}
 .gal figure.t{width:min(60vw,250px)}
 .gal img{width:100%;height:340px;object-fit:cover}
 .gal figcaption{position:absolute;inset:auto 0 0;padding:28px 16px 12px;background:linear-gradient(transparent,rgb(0 0 0/.65));color:#fff;font-weight:500;font-size:15px}
+
+/* videos */
+.vids{background:var(--grass-d);color:#eef4e4}
+.vids h2{color:#fff}.vids .sub{margin:0;max-width:40em;opacity:.9}
+.vgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.1fr) minmax(0,1fr);gap:16px;margin-top:26px;align-items:stretch}
+.vc{margin:0;position:relative;border-radius:20px;overflow:hidden;background:#12200a;box-shadow:0 16px 36px rgb(0 0 0/.35)}
+.vc video{display:block;width:100%;height:clamp(380px,42vw,540px);object-fit:cover}
+.vc figcaption{position:absolute;top:0;inset-inline:0;padding:12px 16px 26px;background:linear-gradient(rgb(0 0 0/.55),transparent);color:#fff;font-weight:700;pointer-events:none}
+.hint{font-size:14px;opacity:.75;margin:14px 0 0}
+@media(max-width:820px){.vgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:8px}.vc{flex:none;scroll-snap-align:start}.vc.tall{width:min(62vw,280px)}.vc.wide{width:min(86vw,560px)}.vc video{height:min(110vw,480px)}}
 
 /* details */
 .det{background:var(--horse-d);color:#f6ece1}
@@ -157,6 +166,7 @@ footer a{color:#fff}
     <div class="links">
       <a href="#about">על החוויה</a>
       <a href="#trip">מה בטיול</a>
+      <a href="#videos">סרטונים</a>
       <a href="#gallery">גלריה</a>
       <a href="#details">פרטים</a>
       <a href="#contact">תיאום</a>
@@ -166,7 +176,7 @@ footer a{color:#fff}
 </nav>
 
 <header class="hero" id="top">
-  <img src="img/hero.jpg" alt="רוכבים על סוסים בשביל בין שדות ירוקים">
+  <video id="heroVid" class="hv" autoplay muted loop playsinline preload="auto" poster="img/p-hero.jpg" aria-hidden="true"></video>
   <div class="in">
     <div>
       <span class="tag">ברוכים הבאים לחוות שלי</span>
@@ -199,8 +209,8 @@ footer a{color:#fff}
       <a class="btn br form-link" href="https://forms.gle/ciFUum2jzkoPxozJ8">למילוי שאלון ההיכרות</a>
     </div>
     <div class="stack-img">
-      <img class="a" src="img/forest.jpg" alt="רכיבה בשביל חורשת אקליפטוס">
-      <img class="b" src="img/horses.jpg" alt="רוכבים עם סוסים בשדה">
+      <img class="a" src="img/arena2.jpg" alt="רוכבת על סוס במגרש הרכיבה של החווה">
+      <img class="b" src="img/trail2.jpg" alt="רכיבה בשביל עפר בין העצים">
     </div>
   </div>
 </section>
@@ -214,6 +224,19 @@ footer a{color:#fff}
       <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21c0-9 4-15 14-17-1 9-6 14-14 17Z"/><path d="M5 21c3-5 6-8 10-11"/></svg></div><h3>חיבור ושקט</h3><p>חיבור לסוסים, לטבע ולשקט – מקום פשוט להיות בו.</p></div>
       <div class="f"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6M15 14.5c3 0 5.5 2 5.5 5"/></svg></div><h3>עד 4 משתתפים</h3><p>קבוצה קטנה ואינטימית, עם ליווי והתאמה אישית לכל אחד.</p></div>
     </div>
+  </div>
+</section>
+
+<section class="band vids" id="videos">
+  <div class="wrap">
+    <h2>רגעים בתנועה</h2>
+    <p class="sub">הציצו לרכיבות שלנו – בשבילי החורשה, בשקיעה בשדות ובמגרש הרכיבה בחווה.</p>
+    <div class="vgrid">
+      <figure class="vc tall"><video src="vid/trail.mp4" poster="img/p-trail.jpg" muted loop playsinline controls preload="none"></video><figcaption>בשבילי החורשה</figcaption></figure>
+      <figure class="vc wide"><video src="vid/arena.mp4" poster="img/p-arena.jpg" muted loop playsinline controls preload="none"></video><figcaption>במגרש הרכיבה בחווה</figcaption></figure>
+      <figure class="vc tall"><video src="vid/sunset.mp4" poster="img/p-sunset.jpg" muted loop playsinline controls preload="none"></video><figcaption>רכיבה בשקיעה</figcaption></figure>
+    </div>
+    <p class="hint">הסרטונים מתנגנים בלי קול – לחצו על הרמקול כדי לשמוע.</p>
   </div>
 </section>
 
@@ -300,10 +323,25 @@ footer a{color:#fff}
   });
 
   const pics = [
-    ['hero.jpg','שביל בין השדות',0],['trail.jpg','בתוך החורשה',0],['group.jpg','יוצאים לדרך',0],
-    ['coffee.jpg','עצירה לקפה',1],['corral.jpg','הכנה לרכיבה בחווה',0],['treats.jpg','קפה ופינוקים בשטח',1],
-    ['forest.jpg','שבילי אקליפטוס',0],['horses.jpg','רגע עם הסוסים',1]
+    ['arena2.jpg','במגרש הרכיבה',0],['sunset2.jpg','שביל בשקיעה',1],['trail2.jpg','בין העצים',1],
+    ['p-arena.jpg','אור של אחר הצהריים',0],['sunset3.jpg','שקט של ערב',1],['arena3.jpg','צעד אחר צעד',0],
+    ['coffee.jpg','עצירה לקפה',1],['hero.jpg','שביל בין השדות',0],['treats.jpg','קפה ופינוקים בשטח',1],['forest.jpg','שבילי אקליפטוס',0]
   ];
+  const hv = document.getElementById('heroVid');
+  const pickHero = () => {
+    const tall = innerHeight > innerWidth;
+    const src = tall ? 'vid/hero-tall.mp4' : 'vid/hero-wide.mp4';
+    if (hv.dataset.src === src) return;
+    hv.dataset.src = src; hv.poster = tall ? 'img/p-hero-tall.jpg' : 'img/p-hero.jpg';
+    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) { hv.src = src; hv.play().catch(() => {}); }
+  };
+  pickHero(); addEventListener('resize', pickHero);
+  const vio = new IntersectionObserver(es => es.forEach(e => {
+    const v = e.target;
+    if (e.isIntersecting) { if (v.preload === 'none') v.preload = 'auto'; if (v.muted) v.play().catch(() => {}); }
+    else v.pause();
+  }), {threshold: .5});
+  document.querySelectorAll('.vc video').forEach(v => vio.observe(v));
   const gal = document.getElementById('gal');
   gal.innerHTML = pics.map(([s,c,t]) => `<figure class="${t?'t':''}"><img src="img/${s}" alt="${c}" loading="lazy"><figcaption>${c}</figcaption></figure>`).join('');
   const step = d => gal.scrollBy({left: d * Math.min(gal.clientWidth * .8, 440), behavior: 'smooth'});
